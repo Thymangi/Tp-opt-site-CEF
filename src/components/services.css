@@ -1,0 +1,74 @@
+/* Services Component Styles */
+.services-container {
+  font-family: "Nunito Sans", sans-serif;
+  color: #444;
+}
+
+/* Header Section */
+.services-header {
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.services-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1e1e1e;
+}
+
+.services-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Services List */
+.services-list {
+  background-color: #fff;
+  padding: 4rem 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 1rem;
+  width: calc(33% - 2rem);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.card i {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
