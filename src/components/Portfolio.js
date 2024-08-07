@@ -7,7 +7,7 @@ function Portfolio() {
       title: "Fresh food",
       description: "Réalisation d'un site web de commande en ligne.",
       tech: "Site réalisé avec PHP et MySQL",
-      image: "/images/fresh-food.jpg",
+      image: "../img/portfolio/fresh-food.jpg",
       link: "#", // Placeholder link
     },
     {

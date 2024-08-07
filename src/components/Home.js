@@ -32,7 +32,7 @@ function Home() {
               </p>
             </div>
             <div className="about-photo">
-              <img src="/images/john-doe.jpg" alt="John Doe" />
+              <img src="/img/john-doe.jpg" alt="John Doe" />
             </div>
           </div>
           <h3>Mes compétences</h3>
