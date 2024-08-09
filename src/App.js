@@ -17,12 +17,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />{" "}
           {/* Route pour la page d'accueil */}
-          <Route path="/home" component={Home} />
-          <Route path="/services" component={Services} />
-          <Route path="/portfolio" component={Portfolio} />
-          <Route path="/blog" component={Blog} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/legal" component={Legal} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/legal" element={<Legal />} />
         </Routes>
       </main>
       <Footer />

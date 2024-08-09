@@ -1,33 +1,68 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom"; // Importer NavLink à la place de Link
 import "./header.css";
 
 function Header() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  // Fonction pour basculer l'état du menu
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <header>
-      <div className="navbar-brand">John Doe</div>
-      <nav>
-        <ul>
+      <div className="container">
+        <div className="logo">
+          <NavLink to="/">John Doe</NavLink>
+        </div>
+        <ul className={`nav-links ${isNavOpen ? "open" : ""}`}>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/home"
+              activeClassName="active"
+              className="inactive" // Classe par défaut pour les éléments non actifs
+            >
+              Accueil
+            </NavLink>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <NavLink
+              to="/services"
+              activeClassName="active"
+              className="inactive"
+            >
+              Services
+            </NavLink>
           </li>
           <li>
-            <Link to="/services">Services</Link>
+            <NavLink
+              to="/portfolio"
+              activeClassName="active"
+              className="inactive"
+            >
+              Réalisations
+            </NavLink>
           </li>
           <li>
-            <Link to="/portfolio">Portfolio</Link>
+            <NavLink to="/blog" activeClassName="active" className="inactive">
+              Blog
+            </NavLink>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
+            <NavLink
+              to="/contact"
+              activeClassName="active"
+              className="inactive"
+            >
+              Me contacter
+            </NavLink>
           </li>
         </ul>
-      </nav>
+        <div className="hamburger-menu" onClick={toggleNav}>
+          <i className="fas fa-bars"></i>
+        </div>
+      </div>
     </header>
   );
 }

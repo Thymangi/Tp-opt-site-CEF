@@ -1,17 +1,14 @@
-/* Home Component Styles */
-.home-container {
-  font-family: "Nunito Sans", sans-serif;
-}
-
 /* Hero Section */
 .hero {
   position: relative;
+  background-image: url("/public/img/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
   height: 100vh;
-  background-image: url("/public/img/hero-bg.jpg"); /* Chemin relatif correct à partir de la racine */
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   text-align: center;
 }
 
@@ -21,7 +18,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .hero-content {
@@ -29,84 +26,210 @@
   z-index: 1;
 }
 
-.hero h1,
-.hero h2 {
-  margin: 0;
-}
-
 .hero h1 {
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+  color: #fff;
 }
 
 .hero h2 {
-  font-size: 1.5rem;
-  margin: 1rem 0;
+  font-size: 2em;
+  margin: 10px 0;
+  color: #fff;
 }
 
-.hero .btn {
-  margin-top: 1rem;
+.btn {
+  background-color: #0d6efd;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
 }
 
 /* About Section */
 .about {
-  background: #eee;
-  padding: 2rem 0;
+  padding: 50px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  max-width: 100%;
 }
 
-.about .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.about h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #1e1e1e;
+  border-bottom: 2px solid #0d6efd;
+  display: inline-block;
+  padding-bottom: 10px;
+  width: 100%;
 }
 
 .about-content {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permet l'empilement des colonnes */
+}
+
+.about-text,
+.photo-skills {
+  flex: 1;
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
 }
 
 .about-text {
   flex: 1;
-  padding: 1rem;
-  color: #444;
+  text-align: center;
+  padding-right: 20px;
+  max-width: 100%;
+  text-align: left;
+}
+
+.about-text p {
+  margin: 15px 0;
+}
+
+.about-text .highlight {
+  font-weight: bold;
+}
+
+.photo-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
 }
 
 .about-photo {
   flex: 1;
-  padding: 1rem;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .about-photo img {
   max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .skills {
+  margin-top: 30px;
   width: 100%;
-  margin-top: 2rem;
+  text-align: left;
 }
 
 .skill {
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
 }
 
 .skill label {
-  display: block;
-  margin-bottom: 0.5rem;
   font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
 }
 
+/* Styles globaux pour les barres de progression */
 .progress {
-  height: 1.5rem;
-  background-color: #ddd;
-  border-radius: 10px;
+  background-color: #ddfaf6 !important;
+  border-radius: 20px;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .progress-bar {
-  background-color: #0d6efd;
-  height: 100%;
+  height: 20px;
+  border-radius: 20px;
+}
+
+.progress-bar-html {
+  background-color: #ff4b4b; /*!important permet de rendre le css ciblé prioritaire*/
+}
+
+.progress-bar-css {
+  background-color: #4b7cff;
+}
+
+.progress-bar-js {
+  background-color: #fcd34d;
+}
+
+.progress-bar-php {
+  background-color: #4bcf50;
+}
+
+.progress-bar-react {
+  background-color: #61dafb;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text,
+  .about-photo {
+    flex: 1 1 100%; /* Assure que les colonnes prennent toute la largeur */
+    min-width: 300px; /* Assure une largeur minimale pour les colonnes */
+    padding: 0; /* Supprime le padding pour éviter les marges inutiles */
+    text-align: center;
+  }
+
+  .photo-skills {
+    order: 2; /*Assure que la photo apparaît toujours après le texte*/
+  }
+
+  .about-photo,
+  .skills {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .about-text {
+    padding-right: 0;
+    margin-bottom: 20px; /* Ajoute de l'espace entre les colonnes sur les petits écrans */
+  }
+  .about-photo img {
+    width: 100%; /* Ajuste la taille de l'image sur les petits écrans */
+  }
+  .skills {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text,
+  .photo-skills {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .photo-skills {
+    order: 2; /* Ensure the photo-skills section always appears after the about-text section */
+  }
+
+  .about-photo img {
+    width: 100%; /* Ensure the image takes up the full width of its container */
+  }
+
+  .skills {
+    margin-top: 20px;
+  }
 }

@@ -1,7 +1,7 @@
 /* footer.css */
 .footer {
   background-color: #f8f9fa;
-  padding: 40px 0;
+  padding: 20px 0;
   font-size: 14px;
   color: #333;
   padding-bottom: 0;
@@ -21,17 +21,17 @@
 
 .footer-column {
   flex: 1;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 .footer-column h3 {
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #000;
 }
 
 .footer-column p {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   line-height: 1.6;
 }
 
@@ -41,11 +41,20 @@
 }
 
 .footer-column ul li {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  position: relative; /* Nécessaire pour positionner la flèche */
+  padding-left: 10px; /* Espace pour la flèche */
+}
+
+.footer-column ul li::before {
+  content: ">"; /* Flèche droite */
+  position: absolute;
+  left: 0;
+  color: #007bff; /* Bleu lin */
 }
 
 .footer-column ul li a {
-  color: #007bff;
+  color: #333; /* Texte en noir */
   text-decoration: none;
 }
 
@@ -53,14 +62,21 @@
   text-decoration: underline;
 }
 
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: bold; /* Ajout pour mettre le texte en gras */
+}
+
 .social-icons {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 .social-icons a {
   color: #333;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .social-icons a:hover {
@@ -84,4 +100,21 @@
 
 .footer-bottom p {
   margin: 0;
+}
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #0056b3;
 }

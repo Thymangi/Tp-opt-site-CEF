@@ -4,38 +4,59 @@ import "./services.css";
 function Services() {
   return (
     <div className="services-container">
-      {/* Header Section */}
+      {/* Bandeau d'image */}
+      <div className="banner-image"></div>
+      {/* Titre Section */}
       <section className="services-header">
         <h1>MON OFFRE DE SERVICES</h1>
-        <p>Voici les prestations sur lesquelles je peux intervenir.</p>
+        <p>
+          <span className="highlight">
+            Voici les prestations sur lesquelles je peux intervenir.
+          </span>
+        </p>
       </section>
 
       {/* Services Section */}
       <section className="services-list">
-        <div className="container">
+        <div className="container-card">
           <div className="card">
-            <i className="fas fa-paint-brush"></i>
-            <h3>UX DESIGN</h3>
+            <i className="fas fa-desktop"></i>
+            <h3>
+              <strong>UX DESIGN</strong>
+            </h3>
             <p>
-              L'UX Design est une méthodologie de conception qui se concentre
-              sur l'amélioration de l'expérience utilisateur. Son but est
-              d'offrir une expérience de qualité et adaptée à l'utilisateur.
+              <strong>L'UX Design</strong> est une méthodologie de conception
+              qui se concentre sur l'amélioration de l'expérience utilisateur.
+              Son but est d'offrir une expérience de qualité et adaptée à
+              l'utilisateur.
             </p>
           </div>
           <div className="card">
-            <i className="fas fa-code"></i>
-            <h3>DÉVELOPPEMENT WEB</h3>
+            <i className="fas fa-file-code"></i>
+            <h3>
+              <strong>DÉVELOPPEMENT WEB</strong>
+            </h3>
             <p>
-              Le développement de sites web requiert l'utilisation des langages
-              HTML, CSS, JavaScript et autres technologies pour créer des sites
-              web performants et adaptatifs.
+              <strong> développement de sites web</strong> requiert
+              l'utilisation des langages{" "}
+              <span className="bold-dotted-underline"> HTML</span>
+              {", "}
+              <span className="bold-dotted-underline">CSS</span>
+              {", "}
+              <span className="bold-dotted-underline">Java Script </span>
+              {", "}
+              et autres technologies pour créer des sites web performants et
+              adaptatifs.
             </p>
           </div>
           <div className="card">
-            <i className="fas fa-search"></i>
-            <h3>RÉFÉRENCEMENT</h3>
+            <i className="fas fa-search-dollar"></i>
+            <h3>
+              <strong>RÉFÉRENCEMENT</strong>
+            </h3>
             <p>
-              Le référencement naturel d'un site, aussi appelé SEO, consiste à
+              Le <strong>référencement naturel d'un site</strong>, aussi appelé{" "}
+              <span className="bold-dotted-underline">SEO</span> , consiste à
               améliorer sa visibilité sur les moteurs de recherche pour
               augmenter le nombre de visites.
             </p>

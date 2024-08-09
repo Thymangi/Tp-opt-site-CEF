@@ -6,6 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="row">
+          {/* Colonne 1 */}
           <div className="footer-column">
             <h3>John Doe</h3>
             <p>
@@ -39,6 +40,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
+          {/* Colonne 2 */}
           <div className="footer-column">
             <h3>Liens utiles</h3>
             <ul>
@@ -59,6 +61,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          {/* Colonne 3 */}
           <div className="footer-column">
             <h3>Mes dernières réalisations</h3>
             <ul>
@@ -73,6 +76,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          {/* Colonne 4 */}
           <div className="footer-column">
             <h3>Mes derniers articles</h3>
             <ul>
@@ -97,6 +101,9 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>© Designed by John Doe</p>
         </div>
+        <a href="#top" id="back-to-top" className="back-to-top">
+          ↑ Haut
+        </a>
       </div>
     </footer>
   );
