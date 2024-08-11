@@ -1,90 +1,60 @@
 import React from "react";
-import "./blog.css";
+import "./contact.css";
 
 function Contact() {
   return (
     <div className="contact-container">
-      {/* Header Section */}
-      <section className="contact-header">
-        <h1>ME CONTACTER</h1>
-        <p>
-          Pour me contacter en vue d'un entretien ou d'une future collaboration,
-          merci de remplir le formulaire de contact.
-        </p>
-      </section>
-
-      {/* Contact Form and Info */}
-      <section className="contact-content">
-        <div className="container">
+      <div className="contact-header-section">
+        <header className="contact-header">
+          <h1>ME CONTACTER</h1>
+          <p>
+            <span className="highlight">
+              Pour me contacter en vue d'un entretien ou d'une future
+              collaboration, merci de remplir le formulaire de contact.
+            </span>
+          </p>
+        </header>
+        <section className="contact-form-section">
           <div className="contact-form">
             <h3>Formulaire de contact</h3>
             <form>
-              <div className="form-group">
-                <label htmlFor="name">Votre nom</label>
-                <input
-                  type="text"
-                  id="name"
-                  className="form-control"
-                  placeholder="Votre nom"
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Votre adresse email</label>
-                <input
-                  type="email"
-                  id="email"
-                  className="form-control"
-                  placeholder="Votre adresse email"
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="phone">Votre numéro de téléphone</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  className="form-control"
-                  placeholder="Votre numéro de téléphone"
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="subject">Sujet</label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="form-control"
-                  placeholder="Sujet"
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Votre message</label>
-                <textarea
-                  id="message"
-                  className="form-control"
-                  rows="4"
-                  placeholder="Votre message"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary">
-                Envoyer
-              </button>
+              <input type="text" placeholder="Votre nom" required />
+              <input type="email" placeholder="Votre adresse email" required />
+              <input
+                type="text"
+                placeholder="Votre numéro de téléphone"
+                required
+              />
+              <input type="text" placeholder="Sujet" required />
+              <textarea
+                placeholder="Votre message"
+                rows="5"
+                required
+              ></textarea>
+              <button type="submit">Envoyer</button>
             </form>
           </div>
           <div className="contact-info">
             <h3>Mes coordonnées</h3>
-            <p>40 Rue Laure Diebold, 69009 Lyon, France</p>
-            <p>Téléphone : 00 00 00 00 00</p>
-            <p>Email : contact@johndoe.com</p>
-            <div className="map-container">
-              {/*<iframe src="https://www.google.com/maps"></iframe>*/}
-            </div>
+            <p>
+              <i className="fas fa-map-marker-alt"></i> 40 Rue Laure Diebold,
+              69009 Lyon, France
+            </p>
+            <p>
+              <i className="fas fa-phone"></i> 06 20 30 40 50
+            </p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2767.302779154347!2d4.800101315312268!3d45.78037997910539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ebd4444444f%3A0xa31e54dcd91840e5!2s40%20Rue%20Laure%20Diebold%2C%2069009%20Lyon%2C%20France!5e0!3m2!1sen!2sfr!4v1660661336660!5m2!1sen!2sfr"
+              width="100%"
+              height="250"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              title="Google Maps"
+            ></iframe>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }

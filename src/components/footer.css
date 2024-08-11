@@ -32,25 +32,29 @@
 
 .footer-column p {
   margin-bottom: 5px;
+  position: relative;
+  text-align: left; /* Aligner le texte à gauche */
   line-height: 1.6;
+  padding-left: 5px; /* Ajouter un retrait à gauche pour paragraphe */
 }
 
 .footer-column ul {
   list-style: none;
-  padding: 0;
+  padding-left: 5px; /* Ajouter un retrait à gauche pour les éléments ul */
 }
 
 .footer-column ul li {
   margin-bottom: 5px;
-  position: relative; /* Nécessaire pour positionner la flèche */
-  padding-left: 10px; /* Espace pour la flèche */
+  position: relative;
+  text-align: left; /* Aligner le texte à gauche */
+  padding-left: 10px; /* Espace pour la flèche à gauche */
 }
 
 .footer-column ul li::before {
   content: ">"; /* Flèche droite */
   position: absolute;
-  left: 0;
-  color: #007bff; /* Bleu lin */
+  left: 0; /* Positionner la flèche à gauche du texte */
+  color: #007bff;
 }
 
 .footer-column ul li a {
@@ -66,7 +70,8 @@
   font-size: 16px;
   margin-bottom: 10px;
   color: #000;
-  font-weight: bold; /* Ajout pour mettre le texte en gras */
+  font-weight: bold;
+  text-align: left; /* Aligner le h3 à gauche */
 }
 
 .social-icons {

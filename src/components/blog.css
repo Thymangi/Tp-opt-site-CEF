@@ -1,14 +1,25 @@
+/* Bandeau d'image */
+.banner-image {
+  width: 100%;
+  height: 200px;
+  background-image: url("/public/img/banner.jpg"); /* S'assurer que le chemin est correct */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+}
+
 /* Blog Component Styles */
 .blog-container {
   font-family: "Nunito Sans", sans-serif;
   color: #444;
 }
 
-/* Header Section */
 .blog-header {
-  background-color: #f8f9fa;
-  padding: 2rem 0;
   text-align: center;
+
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .blog-header h1 {
@@ -20,81 +31,113 @@
 .blog-header p {
   font-size: 1.2rem;
   color: #555;
-}
-
-/* Blog Posts Section */
-.blog-posts {
-  background-color: #fff;
-  padding: 4rem 0;
-}
-
-.container {
-  max-width: 1200px;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  width: 100%; /* Ajustez cette valeur pour la longueur de la ligne */
   margin: 0 auto;
 }
 
-.row {
+/* Soulignement en bleu de la mention */
+.blog-header .highlight {
+  display: inline-block; /* Assure que l'élément prend seulement la place nécessaire */
+  position: relative;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.blog-header .highlight::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 50%; /* Ajustez cette valeur pour contrôler la longueur de la barre */
+  border-bottom: 2px solid #0d6efd;
+}
+
+.blog-list .blog-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.card {
-  margin: 1rem 0;
+.blog-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: none;
+  width: calc(33% - 2rem);
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Aligner le texte à gauche */
 }
 
-.card-img-top {
-  max-height: 200px;
-  object-fit: cover;
+.blog-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  border-radius: 8px; /* Ajouter des coins arrondis aux images */
 }
 
-.card-body {
-  padding: 1.5rem;
-  text-align: center;
+.blog-card-body {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left; /* Aligner le texte à gauche */
 }
 
-.card-title {
+.blog-card-body h3 {
   font-size: 1.5rem;
-  margin: 0.5rem 0;
+  margin: 0 !important;
+  font-weight: bold; /* Mettre les titres des cartes en gras */
 }
 
-.card-text {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-}
-
-.card-date {
-  font-size: 0.9rem;
-  color: #999;
+.blog-card-body p {
+  flex-grow: 1;
   margin-bottom: 1rem;
 }
 
-.btn {
-  margin-top: 1rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .col-md-4 {
-    width: 100%;
-  }
-}
-
-/* Button styling if you want it to look like a link */
-.btn {
-  background-color: #0d6efd;
-  color: #fff;
-  border: none;
+.blog-card-body .blog-btn {
   padding: 0.5rem 1rem;
+  background-color: #0d6efd; /* Fond bleu */
+  color: #fff; /* Texte blanc */
+  border: 1px solid #0d6efd;
   border-radius: 4px;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  text-align: left; /* Aligne le texte à gauche */
+  width: auto; /* Ajuste la largeur du bouton à celle du texte */
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+  margin: 0 auto 0 0; /* Centre le bouton horizontalement avec un espace en bas */
 }
 
-.btn:hover {
+.blog-card-body .blog-btn:hover {
   background-color: #0056b3;
-  text-decoration: none;
+  color: #fff;
+}
+
+.blog-card-body .blog-small-text {
+  font-size: 0.9rem;
+  color: #000000;
+  margin-top: 1rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .blog-card {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-card {
+    width: 100%;
+    margin: 1rem 0;
+  }
 }

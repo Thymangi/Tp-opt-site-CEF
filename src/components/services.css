@@ -2,44 +2,55 @@
 .banner-image {
   width: 100%;
   height: 200px;
-  background-image: url("/public/img/banner.jpg"); /* Assurez-vous que le chemin est correct */
+  background-image: url("/public/img/banner.jpg"); /* S'assurer que le chemin est correct */
   background-size: cover;
   background-position: center;
   margin-bottom: 20px;
 }
 
 /* Header Section */
-.services-header {
+.serv-header {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.services-header h1 {
+.serv-header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-.services-header p {
+.serv-header p {
   font-size: 1.2rem;
   color: #333;
   margin-bottom: 20px;
 }
 
 /* Soulignement en bleu de la mention */
-.services-header .highlight {
-  border-bottom: 2px solid #0d6efd;
+.serv-header .serv-highlight {
+  display: inline-block; /* Assure que l'élément prend seulement la place nécessaire */
+  position: relative;
   padding-bottom: 5px;
   font-weight: bold;
 }
 
+.serv-header .serv-highlight::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 50%; /* Ajustez cette valeur pour contrôler la longueur de la barre */
+  border-bottom: 2px solid #0d6efd;
+}
+
 /* Services Section */
-.services-list .container-card {
+.serv-list .serv-container-card {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.card {
+.serv-card {
   padding: 20px;
   text-align: center;
   margin: 20px !important;
@@ -49,24 +60,24 @@
   border-radius: 0 !important; /* Supprime les coins arrondis */
 }
 
-.card i {
+.serv-card i {
   font-size: 3rem;
   margin-bottom: 10px;
   color: #0d6efd;
 }
 
-.card h3 {
+.serv-card h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
 }
 
-.card p {
+.serv-card p {
   font-size: 1rem;
   line-height: 1.6;
 }
 
 /* Classe pour le texte en gras avec soulignement en pointillé */
-.bold-dotted-underline {
+.serv-bold-dotted-underline {
   font-weight: bold; /* Met le texte en gras */
   text-decoration: underline dotted; /* Ajoute le soulignement en pointillé */
   text-decoration-color: #333; /* Couleur du soulignement */
@@ -75,11 +86,11 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .card {
+  .serv-card {
     flex: 1 1 calc(100% - 20px);
   }
 
-  .banner-image {
+  .serv-banner-image {
     height: 150px; /* Réduire la hauteur sur les petits écrans */
   }
 }

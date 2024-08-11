@@ -1,106 +1,136 @@
+/* Bandeau d'image */
+.port-banner-image {
+  width: 100%;
+  height: 200px;
+  background-image: url("/public/img/banner.jpg"); /* S'assurer que le chemin est correct */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
 /* Portfolio Component Styles */
-.portfolio-container {
+.port-container {
   font-family: "Nunito Sans", sans-serif;
   color: #444;
+  padding: 0;
 }
 
 /* Header Section */
-.portfolio-header {
-  background-color: #f8f9fa;
-  padding: 2rem 0;
+.port-header {
+  background-color: #fff; /* Mettre le fond en blanc */
   text-align: center;
+  border-radius: 8px; /* Ajouter des angles arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre légère */
 }
 
-.portfolio-header h1 {
+.port-header h1 {
   font-size: 2.5rem;
   font-weight: bold;
   color: #1e1e1e;
 }
 
-.portfolio-header p {
+.port-header p {
   font-size: 1.2rem;
   color: #555;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem; /* Ajustez selon l'espacement souhaité */
+}
+
+.port-header p::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Ajustez pour centrer horizontalement */
+  bottom: 0;
+  transform: translateX(-50%); /* Centrer la ligne sous le texte */
+  width: 75%; /* Ajustez cette valeur pour contrôler la longueur de la barre */
+  border-bottom: 2px solid #0d6efd;
 }
 
 /* Portfolio Items */
-.portfolio-items {
+.port-items {
   background-color: #fff;
-  padding: 4rem 0;
+  padding: 0;
 }
 
-.container {
+.port-container-card {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.card {
-  background-color: #f8f9fa;
-  border-radius: 8px;
+.port-card {
+  background-color: #fff;
+  border: 1px solid #000000 !important; /* Ajouter une bordure légère */
+  border-radius: 12px !important; /* Arrondir les angles des cartes */
   padding: 0;
-  margin: 1rem;
-  width: calc(33% - 2rem);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  margin: 1rem; /* Garder un écart entre les cartes */
+  flex: 1 1 calc(33.333% - 2rem); /* Permet de s'assurer que les cartes prennent environ un tiers de la largeur */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre légère */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.card img {
+.port-card img {
   width: 100%;
   height: auto;
+  border-top-left-radius: 12px; /* Arrondir le coin supérieur gauche */
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 0; /* Pas d'arrondi sur le coin inférieur gauche */
+  border-bottom-right-radius: 0;
 }
 
-.card-body {
-  padding: 1.5rem;
+.port-card-body {
   text-align: center;
+  flex: 1;
 }
 
-.card-body h3 {
+.port-card-body h3 {
   font-size: 1.5rem;
   margin: 1rem 0;
 }
 
-.card-body p {
+.port-card-body p {
   font-size: 1rem;
   color: #666;
 }
 
-.card-body .small-text {
-  font-size: 0.9rem;
-  color: #999;
+.port-card-body .port-small-text {
+  font-size: 1rem;
   margin: 0.5rem 0;
+  border-top: 1px solid #000; /* Bordure en haut */
+  padding-top: 2px;
+  width: 100%; /* Faire toucher la bordure les bords de la carte */
+  box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur */
 }
 
-.card-body .btn {
+.port-card-body .port-btn {
   margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  background-color: #fff;
+  color: #0d6efd;
+  border: 1px solid #0d6efd; /* Ajouter une bordure bleue */
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.port-card-body .port-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
 }
 
 /* Responsive Design */
 @media (max-width: 992px) {
-  .card {
-    width: calc(50% - 2rem);
+  .port-card {
+    flex: 1 1 calc(50% - 2rem); /* Sur les tablettes, les cartes prennent 50% de la largeur */
   }
 }
 
 @media (max-width: 768px) {
-  .card {
-    width: 100%;
+  .port-card {
+    flex: 1 1 100%; /* Sur mobile, les cartes prennent toute la largeur */
     margin: 1rem 0;
   }
-}
-
-/* Button styling */
-.btn {
-  background-color: #0d6efd;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-  text-decoration: none;
 }
