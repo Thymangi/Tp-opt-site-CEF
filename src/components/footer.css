@@ -1,9 +1,9 @@
 /* footer.css */
 .footer {
-  background-color: #f8f9fa;
+  background-color: #eee;
   padding: 20px 0;
   font-size: 14px;
-  color: #333;
+  color: #000000;
   padding-bottom: 0;
 }
 
@@ -27,7 +27,7 @@
 .footer-column h3 {
   font-size: 16px;
   margin-bottom: 10px;
-  color: #000;
+  color: #000000;
 }
 
 .footer-column p {
@@ -54,11 +54,11 @@
   content: ">"; /* Flèche droite */
   position: absolute;
   left: 0; /* Positionner la flèche à gauche du texte */
-  color: #007bff;
+  color: #0d6efd;
 }
 
 .footer-column ul li a {
-  color: #333; /* Texte en noir */
+  color: #000000; /* Texte en noir */
   text-decoration: none;
 }
 
@@ -69,7 +69,7 @@
 .footer-column h3 {
   font-size: 16px;
   margin-bottom: 10px;
-  color: #000;
+  color: #000000;
   font-weight: bold;
   text-align: left; /* Aligner le h3 à gauche */
 }
@@ -80,18 +80,18 @@
 }
 
 .social-icons a {
-  color: #333;
+  color: #000000;
   font-size: 30px;
 }
 
 .social-icons a:hover {
-  color: #007bff;
+  color: #0d6efd;
 }
 
 .footer-bottom-container {
   width: 100%;
   background-color: #050505;
-  color: #fff;
+  color: #eee;
   text-align: center;
   padding: 20px 0;
 }
@@ -112,8 +112,8 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #0d6efd;
+  color: #eee;
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
@@ -121,5 +121,5 @@
 }
 
 .back-to-top:hover {
-  background-color: #0056b3;
+  background-color: #0d6efd;
 }

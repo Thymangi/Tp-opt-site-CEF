@@ -1,14 +1,20 @@
-/* Legal Component Styles */
+/* legal.css */
+
+/* Container principal */
 .legal-container {
   font-family: "Nunito Sans", sans-serif;
   color: #444;
+  padding: 2rem;
 }
 
-/* Header Section */
+/* Section du header */
 .legal-header {
-  background-color: #f8f9fa;
-  padding: 2rem 0;
   text-align: center;
+  padding: 2rem 0;
+  background-color: #eee;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
 .legal-header h1 {
@@ -17,61 +23,57 @@
   color: #1e1e1e;
 }
 
-/* Content Section */
-.legal-content {
-  background-color: #fff;
-  padding: 4rem 0;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.accordion {
-  border-top: 1px solid #ddd;
-}
-
-.accordion-item {
-  border-bottom: 1px solid #ddd;
-}
-
-.accordion-header {
-  padding: 1rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f8f9fa;
-}
-
-.accordion-header h2 {
-  margin: 0;
+.legal-header p {
   font-size: 1.2rem;
-  color: #1e1e1e;
+  color: #555;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #0d6efd;
 }
 
-.accordion-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  padding: 0 1rem;
+/* Style des sections */
+.legal-section {
+  background-color: #eee;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
 }
 
-.accordion-body.active {
-  max-height: 500px;
-  padding: 1rem;
+.legal-section .section-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0d6efd;
+  cursor: pointer;
 }
 
-.accordion-body p {
+.legal-section .section-content {
+  margin-top: 1rem;
+  display: none; /* Masqué par défaut */
+  transition: all 0.3s ease-in-out;
+}
+
+.legal-section .section-content p {
+  margin: 0;
+}
+
+.legal-section.active .section-content {
+  display: block; /* Affiche lorsque la section est active */
+}
+
+.section-content p {
   margin: 0.5rem 0;
 }
 
-.accordion-body a {
+.contact-info {
+  font-weight: bold;
+}
+
+.contact-info a {
   color: #0d6efd;
   text-decoration: none;
 }
 
-.accordion-body a:hover {
+.contact-info a:hover {
   text-decoration: underline;
 }

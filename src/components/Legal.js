@@ -10,72 +10,68 @@ function Legal() {
 
   return (
     <div className="legal-container">
-      {/* Header Section */}
-      <section className="legal-header">
+      <header className="legal-header">
         <h1>MENTIONS LÉGALES</h1>
-      </section>
+        <p>Les informations légales concernant ce site.</p>
+      </header>
 
-      {/* Accordion Sections */}
-      <section className="legal-content">
-        <div className="container">
-          <div className="accordion">
-            <div className="accordion-item">
-              <div
-                className="accordion-header"
-                onClick={() => toggleSection("editor")}
-              >
-                <h2>Éditeur du site</h2>
-              </div>
-              <div
-                className={`accordion-body ${
-                  activeSection === "editor" ? "active" : ""
-                }`}
-              >
-                <p>John Doe</p>
-                <p>40 Rue Laure Diebold, 69009 Lyon, France</p>
-                <p>Tel: 06 20 30 40 50</p>
-                <p>
-                  Email:{" "}
-                  <a href="mailto:john.doe@gmail.com">john.doe@gmail.com</a>
-                </p>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <div
-                className="accordion-header"
-                onClick={() => toggleSection("host")}
-              >
-                <h2>Hébergeur</h2>
-              </div>
-              <div
-                className={`accordion-body ${
-                  activeSection === "host" ? "active" : ""
-                }`}
-              >
-                <p>Nom de l'hébergeur</p>
-                <p>Adresse de l'hébergeur</p>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <div
-                className="accordion-header"
-                onClick={() => toggleSection("credits")}
-              >
-                <h2>Crédits</h2>
-              </div>
-              <div
-                className={`accordion-body ${
-                  activeSection === "credits" ? "active" : ""
-                }`}
-              >
-                <p>
-                  Images de <a href="https://pixabay.com/">Pixabay</a>
-                </p>
-              </div>
-            </div>
-          </div>
+      <div className="legal-section">
+        <div
+          className="section-header"
+          onClick={() => toggleSection("editeur")}
+        >
+          Éditeur du site
         </div>
-      </section>
+        <div
+          className={`section-content ${
+            activeSection === "editeur" ? "active" : ""
+          }`}
+        >
+          <p className="contact-info">
+            John Doe
+            <br />
+            40 Rue Laure Diebold
+            <br />
+            69009 Lyon, France
+            <br />
+            Téléphone : 06 20 30 40 50
+            <br />
+            <a href="mailto:john.doe@gmail.com">john.doe@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div className="legal-section">
+        <div
+          className="section-header"
+          onClick={() => toggleSection("hebergeur")}
+        >
+          Hébergeur
+        </div>
+        <div
+          className={`section-content ${
+            activeSection === "hebergeur" ? "active" : ""
+          }`}
+        >
+          <p>Les informations concernant l'hébergeur du site.</p>
+        </div>
+      </div>
+
+      <div className="legal-section">
+        <div
+          className="section-header"
+          onClick={() => toggleSection("credits")}
+        >
+          Crédits
+        </div>
+        <div
+          className={`section-content ${
+            activeSection === "credits" ? "active" : ""
+          }`}
+        >
+          <p>Les crédits et les droits d'auteur des images et contenus.</p>
+        </div>
+      </div>
     </div>
   );
 }

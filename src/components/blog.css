@@ -11,26 +11,25 @@
 /* Blog Component Styles */
 .blog-container {
   font-family: "Nunito Sans", sans-serif;
-  color: #444;
+  color: #000000;
 }
 
 .blog-header {
   text-align: center;
 
-  background-color: #fff;
+  background-color: #eee;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .blog-header h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #1e1e1e;
+  color: #000000;
 }
 
 .blog-header p {
   font-size: 1.2rem;
-  color: #555;
+  color: #000000;
   display: inline-block;
   padding-bottom: 0.5rem;
   width: 100%; /* Ajustez cette valeur pour la longueur de la ligne */
@@ -62,8 +61,8 @@
 }
 
 .blog-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #eee;
+  border: 1px solid #eee;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: calc(33% - 2rem);
@@ -76,7 +75,7 @@
 .blog-card img {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
   border-radius: 8px; /* Ajouter des coins arrondis aux images */
 }
 
@@ -103,7 +102,7 @@
 .blog-card-body .blog-btn {
   padding: 0.5rem 1rem;
   background-color: #0d6efd; /* Fond bleu */
-  color: #fff; /* Texte blanc */
+  color: #eee; /* Texte blanc */
   border: 1px solid #0d6efd;
   border-radius: 4px;
   text-decoration: none;
@@ -116,15 +115,15 @@
 }
 
 .blog-card-body .blog-btn:hover {
-  background-color: #0056b3;
-  color: #fff;
+  background-color: #0d6efd;
+  color: #eee;
 }
 
 .blog-card-body .blog-small-text {
   font-size: 0.9rem;
   color: #000000;
   margin-top: 1rem;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #eee;
   padding-top: 1rem;
 }
 

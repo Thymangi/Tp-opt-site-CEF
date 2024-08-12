@@ -4,7 +4,7 @@ html {
   margin: 0;
   padding: 0;
   font-family: "Nunito Sans", sans-serif;
-  background-color: white;
+  background-color: #eee;
   color: #444;
   height: 100%;
   display: flex;
@@ -25,9 +25,9 @@ main {
 
 /* Le footer reste en bas */
 footer {
-  background-color: #f8f9fa;
+  background-color: #eee;
   padding: 20px 0;
-  color: #333;
+  color: #000000;
   text-align: center;
   width: 100%;
   position: relative;
@@ -54,8 +54,8 @@ a:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #0d6efd;
+  color: #eee;
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
@@ -63,5 +63,5 @@ a:hover {
 }
 
 .back-to-top:hover {
-  background-color: #0056b3;
+  background-color: #0d6efd;
 }
